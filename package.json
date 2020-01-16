@@ -1,11 +1,11 @@
 {
 	"name": "touchbarconsolelog",
 	"author": {
-		"name": "Vincent Puget"
+		"name": "MrP"
 	},
 	"displayName": "Touch Bar console.log()",
 	"description": "This extension adds a console.log(); to your MacBook Pro's Touch Bar while you are working in VSCode.",
-	"publisher": "Vincent Puget",
+	"publisher": "MrP",
 	"galleryBanner": {
 		"color": "#2e323b",
 		"theme": "dark"

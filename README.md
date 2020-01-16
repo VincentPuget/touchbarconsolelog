@@ -1,10 +1,10 @@
 # touchbarconsolelog README
 
-«Touch Bar console.log() extention for MacBook Pro
+"Touch Bar console.log()" extention for MacBook Pro
 
 ## Features
 
-This extension adds a console.log(); to your MacBook Pro's Touch Bar while you are working in VSCode.
+This extension adds a console.log(); button to your MacBook Pro's Touch Bar while you are working in VSCode.
 
 ![Touchbar Example](images/touchbar.png)
 
@@ -21,4 +21,12 @@ MacBook Pro with Touch Bar and Visual Studio Code.
 ### 1.0.0
 
 Initial release of touchbarconsolelog
+
+### 1.0.1
+
+Update .vscodeignore
+
+### 1.0.2
+
+Update README.md
 

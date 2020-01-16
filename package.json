@@ -2,7 +2,7 @@
 	"name": "touchbarconsolelog",
 	"displayName": "touchbarconsolelog",
 	"description": "",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -27,6 +27,7 @@
 					"group": "editing"
                 }
             ]
+        }
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

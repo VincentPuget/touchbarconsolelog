@@ -13,11 +13,24 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('extension.helloWorld', () => {
+	let disposable = vscode.commands.registerCommand('extension.touchbarconsolelog', () => {
 		// The code you place here will be executed every time your command is executed
 
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World!');
+		let editor = vscode.window.activeTextEditor;
+		if (!editor) {
+			return; // No open text editor
+		}
+		const position = editor.selection.active;
+
+		const text = editor.document.getText(editor.selection);
+
+		if (typeof text !== 'undefined' && text !== '') {
+			editor.insertSnippet(new vscode.SnippetString('\nconsole.log(\'' + text + '\', ' + text + ');\n'), position);
+		} else {
+			editor.insertSnippet(new vscode.SnippetString('\nconsole.log();\n'), position);
+		}
+
+
 	});
 
 	context.subscriptions.push(disposable);

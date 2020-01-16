@@ -10,16 +10,23 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.touchbarconsolelog"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.touchbarconsolelog",
+				"title": "console.log()"
 			}
-		]
+		],
+		"menus": {
+            "touchBar": [
+                {
+                    "command": "extension.touchbarconsolelog",
+					"group": "editing"
+                }
+            ]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

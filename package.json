@@ -22,6 +22,12 @@
 	"categories": [
 		"Other"
 	],
+	"keywords": [
+		"MacBook pro",
+		"VSCode",
+		"Touch Bar",
+		"console.log()"
+	],
 	"activationEvents": [
 		"onCommand:extension.touchbarconsolelog"
 	],

@@ -1,8 +1,21 @@
 {
 	"name": "touchbarconsolelog",
-	"displayName": "touchbarconsolelog",
-	"description": "",
+	"author": {
+		"name": "Vincent Puget"
+	},
+	"displayName": "Touch Bar console.log()",
+	"description": "This extension adds a console.log(); to your MacBook Pro's Touch Bar while you are working in VSCode.",
+	"publisher": "Vincent Puget",
+	"galleryBanner": {
+		"color": "#2e323b",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/VincentPuget/touchbarconsolelog"
+	},
 	"version": "1.0.0",
+	"icon": "images/icon.png",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -17,7 +30,7 @@
 		"commands": [
 			{
 				"command": "extension.touchbarconsolelog",
-				"title": "console.log()"
+				"title": "console.log();"
 			}
 		],
 		"menus": {

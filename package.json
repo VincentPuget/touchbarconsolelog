@@ -14,7 +14,7 @@
 		"type": "git",
 		"url": "https://github.com/VincentPuget/touchbarconsolelog"
 	},
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"icon": "images/icon.png",
 	"engines": {
 		"vscode": "^1.41.0"
@@ -40,13 +40,13 @@
 			}
 		],
 		"menus": {
-            "touchBar": [
-                {
-                    "command": "extension.touchbarconsolelog",
+			"touchBar": [
+				{
+					"command": "extension.touchbarconsolelog",
 					"group": "editing"
-                }
-            ]
-        }
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
@@ -60,10 +60,25 @@
 		"@types/mocha": "^5.2.7",
 		"@types/node": "^12.11.7",
 		"@types/vscode": "^1.41.0",
+		"git-precommit-checks": "^3.0.2",
 		"glob": "^7.1.5",
+		"husky": "^4.2.3",
 		"mocha": "^6.2.2",
-		"typescript": "^3.6.4",
+		"precise-commits": "^1.0.2",
+		"prettier": "^1.19.1",
 		"tslint": "^5.20.0",
+		"typescript": "^3.6.4",
 		"vscode-test": "^1.2.2"
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+			"pre-commit": "git-precommit-checks && precise-commits"
+		}
 	}
 }
